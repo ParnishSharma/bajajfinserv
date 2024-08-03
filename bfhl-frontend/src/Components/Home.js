@@ -17,7 +17,7 @@ function App() {
         throw new Error('Invalid JSON input. The JSON must contain a key "data" with an array value.');
       }
 
-      const result = await axios.post('http://localhost:5000/bfhl', parsedData);
+      const result = await axios.post('https://bajajfinserv-1.onrender.com/', parsedData);
       setResponse(result.data);
     } catch (error) {
       setError(error.message);
